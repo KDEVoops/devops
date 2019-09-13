@@ -1,4 +1,4 @@
-FROM debian:9.11
+FROM debian:9
 MAINTAINER Kirill admin@vahra.ru
 
 # install apache2
