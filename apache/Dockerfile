@@ -1,4 +1,5 @@
 FROM debian:9.11
+MAINTAINER Kirill admin.@vahra.ru
 
 # install apache2
 apt-get update
