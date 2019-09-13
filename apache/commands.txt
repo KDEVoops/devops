@@ -1,1 +1,8 @@
-docker pull debian:9.11 
+docker pull debian:9
+
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+docker images -a
+docker rmi Image Image
+
+https://www.8host.com/blog/ustanovka-i-ispolzovanie-docker-v-debian-9/
