@@ -8,3 +8,6 @@ service apache2 start
 
 # copy index file to apache dir
 cp index.php /var/www/html/index.php
+
+# open port
+EXPOSE 80
