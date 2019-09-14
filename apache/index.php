@@ -3,8 +3,7 @@
 <title>Something</title>
 </head>
 <body>
-php echo $_SERVER['REMOTE_ADDR'] 
-
+<h1>PHP info should appear bottom, but this is not guaranteed. :)</h1>
 <?php phpinfo(); ?>
 </body>
 </html>
