@@ -10,3 +10,6 @@ https://www.8host.com/blog/ustanovka-i-ispolzovanie-docker-v-debian-9/
 alias drmac='docker rm $(docker ps -a -q)'
 alias dapdir='cd /home/adminko/docker/devops/apache/'
 alias ll='ls -hal'
+
+
+docker run -p 80:80 apache

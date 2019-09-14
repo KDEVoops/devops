@@ -6,11 +6,15 @@ MAINTAINER Kirill admin@vahra.ru
 RUN apt-get update
 RUN apt-get install apt-utils -y
 RUN apt-get install apache2 -y
+RUN apt-get install php7.0 -y
 
-CMD service apache2 start
-
+RUN rm -f /var/www/html/index.html
+RUN rm -f /var/www/html/index.html
 # copy index file to apache dir
-COPY /home/adminko/docker/devops/apache/index.php /var/www/html/index.php
+COPY index.php /var/www/html/index.php
 
 # open port
 EXPOSE 80
+
+# autostart apache2
+ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
