@@ -1,0 +1,11 @@
+apache:
+    image: apache
+    container_name: apache
+
+proxy:
+    image: proxy
+    container_name: proxy
+    ports:
+        - 8080:8080
+    links:
+        - apache
