@@ -2,14 +2,16 @@ FROM debian:9
 
 MAINTAINER Kirill admin@vahra.ru
 
-# install apache2
+# install nginx
 RUN apt-get update
-RUN apt-get install apt-utils -y
-RUN apt-get install apache2 -y
-RUN service apache2 start
+RUN apt-get install -y apt-utils
+RUN apt-get install -y nginx
 
-# copy index file to apache dir
-RUN cp index.php /var/www/html/index.php
+# replace nginx config file
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # open port
-EXPOSE 80
+EXPOSE 8080
+
+# autostart nginx
+ENTRYPOINT ["/usr/sbin/nginx", "-g", "daemon off;"]

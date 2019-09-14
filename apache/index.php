@@ -1,9 +1,9 @@
 <html>
 <head>
-<title>Something</title>
+<title>APACHE</title>
 </head>
 <body>
-<h1>PHP info should appear bottom, but this is not guaranteed. :)</h1>
+<h1>PHP info should appear bottom, but it's not guaranteed. :)</h1>
 <?php phpinfo(); ?>
 </body>
 </html>

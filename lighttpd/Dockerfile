@@ -2,14 +2,20 @@ FROM debian:9
 
 MAINTAINER Kirill admin@vahra.ru
 
-# install apache2
+# install lighttpd
 RUN apt-get update
-RUN apt-get install apt-utils -y
-RUN apt-get install apache2 -y
-RUN service apache2 start
+RUN apt-get install -y apt-utils
+RUN apt-get install -y lighttpd
 
-# copy index file to apache dir
-RUN cp index.php /var/www/html/index.php
-
+# Del defaults
+#RUN rm -f /var/www/html/index.lighttpd.html
+# copy index file to web dir
+COPY index.html /var/www/html/index.html
+COPY lighttpd.conf /etc/lighttpd/lighttpd.conf
 # open port
-EXPOSE 80
+EXPOSE 82
+
+# autostart lighttpd
+ENTRYPOINT ["/usr/sbin/lighttpd", "-D", "-f", "/etc/lighttpd/lighttpd.conf"]
+
+

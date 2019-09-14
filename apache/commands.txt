@@ -12,4 +12,11 @@ alias dapdir='cd /home/adminko/docker/devops/apache/'
 alias ll='ls -hal'
 
 
-docker run -p 80:80 apache
+docker run --name=apache -d -p 80:80 apache
+ docker run --name=lighttpd -d -p 82:82 lighttpd
+docker run --name=proxy -d -p 8080:80 proxy
+
+
+
+
+docker exec -it [container-id] bash
