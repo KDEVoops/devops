@@ -15,5 +15,5 @@ KNOWN ISSUES
 =====================
 <ul>
   <li>DNS resolver for accessing web servers in containers by name without hosts file.</li>
-  <li>Flask app</li>
+  <li>Flask app.</li>
 </ul>
