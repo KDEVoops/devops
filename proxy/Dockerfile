@@ -11,7 +11,6 @@ RUN apt-get install -y nginx
 COPY nginx.conf /etc/nginx/nginx.conf
 
 # open port
-EXPOSE 8080
-
+EXPOSE 80 8080
 # autostart nginx
 ENTRYPOINT ["/usr/sbin/nginx", "-g", "daemon off;"]

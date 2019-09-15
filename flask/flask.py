@@ -1,9 +1,8 @@
-from flask import Flask
-application = Flask(__name__)
+import flask
+app = Flask(__name__)
+flaskver = flask.__version__
 
-@application.route("/")
-def hello():
-    return "<h1 style='color:blue'>Hello There!</h1>"
+@app.route('/')
 
-if __name__ == "__main__":
-    application.run(host='0.0.0.0')
+def fver():
+    return flaskver
