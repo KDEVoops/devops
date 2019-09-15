@@ -1,7 +1,7 @@
 # devops
 REQUIREMENTS
 ============
-For name resolving without DNS-server add a line to /etc/hosts file using command:
+For name resolving without DNS-server (until I add dnsmasq) add a line to /etc/hosts file using command:
 <p><i>echo '127.0.0.1 apache flask lighttpd' >> /etc/hosts</i></p>
 
 
