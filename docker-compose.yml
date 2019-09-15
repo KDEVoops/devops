@@ -1,15 +1,19 @@
-version: "2"
+version: '2.0'
 services:
  apache:
+  build: apache/.
   image: apache
   container_name: apache
  flask:
+  build: flask/.
   image: flask
   container_name: flask
  lighttpd:
+  build: lighttpd/.
   image: lighttpd
   container_name: lighttpd
  proxy:
+  build: proxy/.
   image: proxy
   container_name: proxy
   ports:

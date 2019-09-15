@@ -5,22 +5,27 @@ docker rm $(docker ps -a -q)
 docker images -a
 docker rmi Image Image
 
-https://www.8host.com/blog/ustanovka-i-ispolzovanie-docker-v-debian-9/
 
 alias drmac='docker rm $(docker ps -a -q)'
 alias dapdir='cd /home/adminko/docker/devops/apache/'
 alias ll='ls -hal'
 
 
+
+
 docker run --name=apache -d -p 80:80 apache
  docker run --name=lighttpd -d -p 82:82 lighttpd
 docker run --name=proxy -d -p 80:80 -p 8080:8080 proxy 
 
-docker-compose version 1.8.0, build unknown
+docker-compose version 1.8.0
 Docker Engine - Community Version: 19.03.2
-
 
 
 docker exec -it [container-id] bash
 docker-compose up -d
 docker-compose down
+docker-compose up -d --no-deps --build nginx
+
+echo '127.0.0.1       apache flask lighttpd' >> /etc/hosts
+docker-compose up --build
+
