@@ -1,4 +1,3 @@
-# devops
 REQUIREMENTS
 ============
 For name resolving without DNS-server (until I add dnsmasq) add a line to /etc/hosts file using command:
