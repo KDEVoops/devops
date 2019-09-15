@@ -17,3 +17,10 @@ KNOWN ISSUES
   <li>DNS resolver for accessing web servers in containers by name without hosts file.</li>
   <li>Flask app.</li>
 </ul>
+
+
+DEPLOYMENT
+=====================
+git clone https://github.com/KDEVoops/devops
+cd devops
+docker-compose up -d —build
