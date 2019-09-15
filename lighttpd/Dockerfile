@@ -13,7 +13,7 @@ RUN apt-get install -y lighttpd
 COPY index.html /var/www/html/index.html
 COPY lighttpd.conf /etc/lighttpd/lighttpd.conf
 # open port
-EXPOSE 82
+EXPOSE 80
 
 # autostart lighttpd
 ENTRYPOINT ["/usr/sbin/lighttpd", "-D", "-f", "/etc/lighttpd/lighttpd.conf"]

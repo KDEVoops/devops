@@ -14,9 +14,13 @@ alias ll='ls -hal'
 
 docker run --name=apache -d -p 80:80 apache
  docker run --name=lighttpd -d -p 82:82 lighttpd
-docker run --name=proxy -d -p 8080:80 proxy
+docker run --name=proxy -d -p 80:80 -p 8080:8080 proxy 
 
+docker-compose version 1.8.0, build unknown
+Docker Engine - Community Version: 19.03.2
 
 
 
 docker exec -it [container-id] bash
+docker-compose up -d
+docker-compose down

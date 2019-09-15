@@ -1,11 +1,19 @@
-apache:
-    image: apache
-    container_name: apache
+version: "2"
+services:
+ apache:
+  image: apache
+  container_name: apache
+ flask:
+  image: flask
+  container_name: flask
+ lighttpd:
+  image: lighttpd
+  container_name: lighttpd
+ proxy:
+  image: proxy
+  container_name: proxy
+  ports:
+   - 8080:8080
+   - 80:80
+   
 
-proxy:
-    image: proxy
-    container_name: proxy
-    ports:
-        - 8080:8080
-    links:
-        - apache
