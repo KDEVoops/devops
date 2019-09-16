@@ -21,6 +21,6 @@ KNOWN ISSUES
 
 DEPLOYMENT
 =====================
-<p>git clone https://github.com/KDEVoops/devops
+<p>git clone https://github.com/KDEVoops/devops.git
 <p>cd devops
 <p>docker-compose up -d --build
